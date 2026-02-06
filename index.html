@@ -27,6 +27,7 @@ body{
   height:100%;
 }
 
+/* 座席色 */
 .seat{
   fill:#00c853;   /* 空席：緑 */
   stroke:#000;
@@ -34,14 +35,16 @@ body{
 }
 
 .seat.occupied{
-  fill:#e53935;   /* 着席：赤 */
+  fill:#e53935;   /* 着座：赤 */
 }
 
+/* タップ判定 */
 .hit{
   fill:transparent;
   pointer-events:all;
 }
 
+/* 表示文字 */
 .label{
   fill:#000;
   font-size:16px;
@@ -57,120 +60,131 @@ body{
 <body>
 
 <div class="wrapper">
-  <!-- 背景レイアウト画像 -->
+  <!-- 背景レイアウト -->
   <img src="レイアウト.png">
 
-  <!-- 座席SVG -->
   <svg viewBox="0 0 960 720">
 
     <!-- 1 -->
     <g>
       <rect class="seat" data-id="1" x="873" y="180" width="79" height="73" rx="16"/>
-      <rect class="hit"  x="873" y="180" width="79" height="73" rx="16"
+      <rect class="hit" x="873" y="180" width="79" height="73" rx="16"
         onclick="toggleSeat(1)"/>
-      <text class="label" id="label-1" x="912.5" y="216.5">1</text>
+      <text class="label" id="label-1" x="912.5" y="216.5">1
+空席</text>
     </g>
 
     <!-- 2 -->
     <g>
       <rect class="seat" data-id="2" x="873" y="327" width="79" height="73" rx="16"/>
-      <rect class="hit"  x="873" y="327" width="79" height="73" rx="16"
+      <rect class="hit" x="873" y="327" width="79" height="73" rx="16"
         onclick="toggleSeat(2)"/>
-      <text class="label" id="label-2" x="912.5" y="363.5">2</text>
+      <text class="label" id="label-2" x="912.5" y="363.5">2
+空席</text>
     </g>
 
     <!-- 3 -->
     <g>
       <rect class="seat" data-id="3" x="634" y="131.5" width="79" height="73" rx="16"/>
-      <rect class="hit"  x="634" y="131.5" width="79" height="73" rx="16"
+      <rect class="hit" x="634" y="131.5" width="79" height="73" rx="16"
         onclick="toggleSeat(3)"/>
-      <text class="label" id="label-3" x="673.5" y="168">3</text>
+      <text class="label" id="label-3" x="673.5" y="168">3
+空席</text>
     </g>
 
     <!-- 4 -->
     <g>
       <rect class="seat" data-id="4" x="414" y="79" width="79" height="73" rx="16"/>
-      <rect class="hit"  x="414" y="79" width="79" height="73" rx="16"
+      <rect class="hit" x="414" y="79" width="79" height="73" rx="16"
         onclick="toggleSeat(4)"/>
-      <text class="label" id="label-4" x="453.5" y="115.5">4</text>
+      <text class="label" id="label-4" x="453.5" y="115.5">4
+空席</text>
     </g>
 
     <!-- 5 -->
     <g>
       <rect class="seat" data-id="5" x="222" y="128" width="79" height="73" rx="16"/>
-      <rect class="hit"  x="222" y="128" width="79" height="73" rx="16"
+      <rect class="hit" x="222" y="128" width="79" height="73" rx="16"
         onclick="toggleSeat(5)"/>
-      <text class="label" id="label-5" x="261.5" y="164.5">5</text>
+      <text class="label" id="label-5" x="261.5" y="164.5">5
+空席</text>
     </g>
 
     <!-- 6 -->
     <g>
       <rect class="seat" data-id="6" x="221.5" y="207" width="79" height="73" rx="16"/>
-      <rect class="hit"  x="221.5" y="207" width="79" height="73" rx="16"
+      <rect class="hit" x="221.5" y="207" width="79" height="73" rx="16"
         onclick="toggleSeat(6)"/>
-      <text class="label" id="label-6" x="261" y="243.5">6</text>
+      <text class="label" id="label-6" x="261" y="243.5">6
+空席</text>
     </g>
 
     <!-- 7 -->
     <g>
       <rect class="seat" data-id="7" x="533" y="315.5" width="152" height="62" rx="16"/>
-      <rect class="hit"  x="533" y="315.5" width="152" height="62" rx="16"
+      <rect class="hit" x="533" y="315.5" width="152" height="62" rx="16"
         onclick="toggleSeat(7)"/>
-      <text class="label" id="label-7" x="609" y="346.5">7</text>
+      <text class="label" id="label-7" x="609" y="346.5">7
+空席</text>
     </g>
 
     <!-- 8 -->
     <g>
       <rect class="seat" data-id="8" x="686.5" y="436.5" width="70" height="137" rx="16"/>
-      <rect class="hit"  x="686.5" y="436.5" width="70" height="137" rx="16"
+      <rect class="hit" x="686.5" y="436.5" width="70" height="137" rx="16"
         onclick="toggleSeat(8)"/>
-      <text class="label" id="label-8" x="721.5" y="505">8</text>
+      <text class="label" id="label-8" x="721.5" y="505">8
+空席</text>
     </g>
 
     <!-- 9 -->
     <g>
       <rect class="seat" data-id="9" x="686.5" y="576.5" width="70" height="137" rx="16"/>
-      <rect class="hit"  x="686.5" y="576.5" width="70" height="137" rx="16"
+      <rect class="hit" x="686.5" y="576.5" width="70" height="137" rx="16"
         onclick="toggleSeat(9)"/>
-      <text class="label" id="label-9" x="721.5" y="645">9</text>
+      <text class="label" id="label-9" x="721.5" y="645">9
+空席</text>
     </g>
 
     <!-- 10 -->
     <g>
       <rect class="seat" data-id="10" x="295" y="310" width="71" height="73" rx="16"/>
-      <rect class="hit"  x="295" y="310" width="71" height="73" rx="16"
+      <rect class="hit" x="295" y="310" width="71" height="73" rx="16"
         onclick="toggleSeat(10)"/>
-      <text class="label" id="label-10" x="330.5" y="346.5">10</text>
+      <text class="label" id="label-10" x="330.5" y="346.5">10
+空席</text>
     </g>
 
     <!-- 11 -->
     <g>
       <rect class="seat" data-id="11" x="294.5" y="388" width="70" height="96" rx="16"/>
-      <rect class="hit"  x="294.5" y="388" width="70" height="96" rx="16"
+      <rect class="hit" x="294.5" y="388" width="70" height="96" rx="16"
         onclick="toggleSeat(11)"/>
-      <text class="label" id="label-11" x="329.5" y="436">11</text>
+      <text class="label" id="label-11" x="329.5" y="436">11
+空席</text>
     </g>
 
     <!-- 12 -->
     <g>
       <rect class="seat" data-id="12" x="294.5" y="521" width="70" height="96" rx="16"/>
-      <rect class="hit"  x="294.5" y="521" width="70" height="96" rx="16"
+      <rect class="hit" x="294.5" y="521" width="70" height="96" rx="16"
         onclick="toggleSeat(12)"/>
-      <text class="label" id="label-12" x="329.5" y="569">12</text>
+      <text class="label" id="label-12" x="329.5" y="569">12
+空席</text>
     </g>
 
     <!-- 13 -->
     <g>
       <rect class="seat" data-id="13" x="295" y="620" width="70" height="96" rx="16"/>
-      <rect class="hit"  x="295" y="620" width="70" height="96" rx="16"
+      <rect class="hit" x="295" y="620" width="70" height="96" rx="16"
         onclick="toggleSeat(13)"/>
-      <text class="label" id="label-13" x="330" y="668">13</text>
+      <text class="label" id="label-13" x="330" y="668">13
+空席</text>
     </g>
 
   </svg>
 </div>
 
-<!-- Firebase / Firestore -->
 <script type="module">
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
 import {
@@ -180,7 +194,7 @@ import {
   onSnapshot
 } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
 
-/* Firebase 設定（あなたのもの） */
+/* Firebase 設定 */
 const firebaseConfig = {
   apiKey: "AIzaSyDQ75bvB1EHssiigzoROhVcyq7JgvXY6FE",
   authDomain: "seat-managerk.firebaseapp.com",
@@ -198,13 +212,8 @@ window.toggleSeat = async (id) => {
   const seat = document.querySelector(`.seat[data-id="${id}"]`);
   const occupied = !seat.classList.contains("occupied");
 
-  const time = occupied
-    ? new Date().toLocaleTimeString("ja-JP",{hour:'2-digit',minute:'2-digit'})
-    : "";
-
   await setDoc(doc(db,"seats",String(id)),{
-    occupied,
-    time
+    occupied
   });
 };
 
@@ -216,10 +225,13 @@ for(let i=1;i<=13;i++){
     const seat = document.querySelector(`.seat[data-id="${i}"]`);
     const label = document.getElementById(`label-${i}`);
 
-    seat.classList.toggle("occupied", snap.data().occupied);
-    label.textContent = snap.data().occupied
-      ? `${i}\n${snap.data().time}`
-      : i;
+    if(snap.data().occupied){
+      seat.classList.add("occupied");
+      label.textContent = `${i}\n着座`;
+    }else{
+      seat.classList.remove("occupied");
+      label.textContent = `${i}\n空席`;
+    }
   });
 }
 </script>
